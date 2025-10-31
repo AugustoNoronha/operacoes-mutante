@@ -73,4 +73,35 @@ describe('Suíte de Testes Fraca para 50 Operações Aritméticas', () => {
   test('48. deve calcular o dobro de um número', () => { expect(dobro(10)).toBe(20); });
   test('49. deve calcular o triplo de um número', () => { expect(triplo(10)).toBe(30); });
   test('50. deve calcular a metade de um número', () => { expect(metade(20)).toBe(10); });
+
+
+  //testes projeto teste
+test('Deve calcular corretamente a mediana de um array com número par de elementos', () => {
+  expect(medianaArray([2, 4, 6, 8])).toBe(5);
+});
+
+test('Deve calcular corretamente a mediana de um array com número ímpar de elementos', () => {
+  expect(medianaArray([1, 3, 5])).toBe(3);
+});
+
+test('Deve retornar falso para números menores ou iguais a 1', () => {
+  expect(isPrimo(0)).toBe(false);
+  expect(isPrimo(1)).toBe(false);
+});
+
+test('Deve retornar falso para números não primos', () => {
+  expect(isPrimo(4)).toBe(false);
+  expect(isPrimo(9)).toBe(false);
+});
+
+test('Deve retornar verdadeiro para números primos', () => {
+  expect(isPrimo(5)).toBe(true);
+  expect(isPrimo(7)).toBe(true);
+});
+
+test('Deve lançar erro ao tentar dividir por zero', () => {
+  expect(() => divisao(10, 0)).toThrow('Divisão por zero não é permitida.');
+});
+
+
 });
